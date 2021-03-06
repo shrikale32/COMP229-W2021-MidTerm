@@ -1,4 +1,7 @@
-/* custom JS goes here */
+/* app.js - custom JS goes here */
+/* Author Name: Shrikant Kale */
+/* Student ID: 301150258 */
+/* Application: Favourite Book List webapp */
 
 /* pagination code from http://www.bootply.com/lxa0FF9yhw */
 $.fn.pageMe = function(opts){
@@ -108,7 +111,7 @@ $.fn.pageMe = function(opts){
   $(".btn-danger").click(function(event){
     if(!confirm("Are you sure?")) {
       event.preventDefault();
-      window.location.assign("/books");
+      window.location.assign("/books"); //route to redirect user to books page on cancel
     }
   });
 

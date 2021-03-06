@@ -26,10 +26,6 @@ router.get('/', (req, res, next) => {
 //  GET the Book Details page in order to add a new Book
 router.get('/add', (req, res, next) => {
   res.render('books/details', { title: 'Add Book', books : ''});
-    /*****************
-     * ADD CODE HERE *
-     *****************/
-
 });
 
 // POST process the Book Details page and create a new Book - CREATE
@@ -53,10 +49,6 @@ book.create(newBook, (err, book) =>{
         res.redirect('/books');
     }
 });
-    /*****************
-     * ADD CODE HERE *
-     *****************/
-
 });
 
 // GET the Book Details page in order to edit an existing Book
@@ -75,11 +67,6 @@ router.get('/:id', (req, res, next) => {
           res.render('books/details', {title: 'Edit Book', books : bookList})
       }
   });
-
-
-    /*****************
-     * ADD CODE HERE *
-     *****************/
 });
 
 // POST - process the information passed from the details form and update the document
@@ -106,9 +93,6 @@ router.post('/:id', (req, res, next) => {
           res.redirect('/books');
       }
   });
-    /*****************
-     * ADD CODE HERE *
-     *****************/
 
 });
 
@@ -129,9 +113,7 @@ router.get('/delete/:id', (req, res, next) => {
              res.redirect('/books');
         }
     });
-    /*****************
-     * ADD CODE HERE *
-     *****************/
+   
 });
 
 
